@@ -1,0 +1,45 @@
+﻿@using LoginReg.Models
+@model User
+
+@{
+    ViewData["Title"] = "A Web Page";
+}
+
+<div id="container">
+    <div class="text-center">
+        <h1 class="display-4">Register to this Cool Site!</h1>
+        <a href="/login">Login</a>
+    </div>
+    <div id="row">
+        <div id="form" class="mx-auto">
+            <form asp-action="Register" asp-controller="Home" method="post">
+                <div class="form-group">
+                    <label asp-for="FirstName"></label>
+                    <input type="text" asp-for="FirstName" id="" class="form-control">
+                    <span style="color:Red;" asp-validation-for="FirstName"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LastName"></label>
+                    <input type="text" asp-for="LastName" id="" class="form-control">
+                    <span style="color:Red;" asp-validation-for="LastName"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email"></label>
+                    <input type="text" asp-for="Email" id="" class="form-control">
+                    <span style="color:Red;" asp-validation-for="Email"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password"></label>
+                    <input type="password" asp-for="Password" id="" class="form-control">
+                    <span style="color:Red;" asp-validation-for="Password"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ConfirmPW"></label>
+                    <input type="password" asp-for="ConfirmPW" id="" class="form-control">
+                    <span style="color:Red;" asp-validation-for="ConfirmPW"></span>
+                </div>
+                <button type="submit">Sign Up Now!</button>
+            </form>
+        </div>
+    </div>
+</div>

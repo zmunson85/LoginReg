@@ -1,0 +1,30 @@
+@using LoginReg.Models
+@model LoginUser
+
+@{
+    ViewData["Title"] = "A Web Page";
+}
+
+<div id="container">
+    <div class="text-center">
+        <h1 class="display-4">Register to this Cool Site!</h1>
+        <a href="/">Register</a>
+    </div>
+    <div id="row">
+        <div id="form" class="mx-auto">
+            <form asp-action="Process" asp-controller="Home" method="post">
+                <div class="form-group">
+                    <label asp-for="LoginEmail"></label>
+                    <input type="text" asp-for="LoginEmail" id="" class="form-control">
+                    <span style="color:Red;" asp-validation-for="LoginEmail"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LoginPassword"></label>
+                    <input type="password" asp-for="LoginPassword" id="" class="form-control">
+                    <span style="color:Red;" asp-validation-for="LoginPassword"></span>
+                </div>
+                <button type="submit">Log Me In Now!</button>
+            </form>
+        </div>
+    </div>
+</div>
