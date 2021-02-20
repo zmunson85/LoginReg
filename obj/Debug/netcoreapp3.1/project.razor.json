@@ -14422,11 +14422,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Owner\\OneDrive\\Desktop\\Dojo_Assignments\\csharp\\LoginReg\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\Owner\\OneDrive\\Desktop\\Dojo_Assignments\\csharp\\LoginReg\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"

@@ -30,6 +30,7 @@ namespace LoginReg.Controllers
         [HttpPost("register")]
         public IActionResult Register(User NewUser)
         {
+            //checking to see if db is valid in models mycontext
             if (ModelState.IsValid)
             {
                 if (_context.Users.Any(u => u.Email == NewUser.Email))
@@ -88,12 +89,14 @@ namespace LoginReg.Controllers
 
             var isInSession = HttpContext.Session.GetInt32("LoggedInID");
             if (isInSession > 0)
+
             {
-                return View("Success");
+                var currentUser= _context.Users.FirstOrDefault(user=> user.UserId==isInSession);
+                return View(currentUser);
             }
             else
             {
-                return RedirectToAction("Index");
+                return RedirectToAction("Success");
             }
         }
 

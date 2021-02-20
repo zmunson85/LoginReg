@@ -30,8 +30,8 @@ namespace LoginReg.Models
         [Display(Name = "Password: ")]
         public string Password { get; set; }
 
-        public DateTime CreateAt { get; set; } = DateTime.Now;
-        public DateTime UpdatedAt { get; set; } = DateTime.Now;
+        public DateTime CreateAt { get; set; } = DateTime.Now;//establish current time
+        public DateTime UpdatedAt { get; set; } = DateTime.Now;//use current time again
         // Not mapped keeps ConfirmPW out of our SQL tables.
         [NotMapped]
         [Required(ErrorMessage = "Confirm Password required")]
